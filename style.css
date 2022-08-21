@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 5px repeat(6,minmax(50px,auto)) 5px;
+    background-color: #fff;
+    grid-template-areas: 
+        " .... ............ .....   ....     .....   ....... ....... ......"
+        ".... profile-icon .....   logo     logo    ....... comment  ....."
+        ".... profile      profile profile  profile profile profile  ....." 
+        ".... .......      reject  reject  heart  heart .......  ....."
+        ".... .......      .....   ....     .....   ....... ....... ......";
+     gap: 5px;
+}
+
+.profile-icon, .app-logo, .chat-icon {
+    height: 30px;
+}
+
+.profile-icon, .chat-icon {
+    width: 30px;
+    justify-self: center;
+}
+
+.profile-icon {
+    grid-area: profile-icon;
+}
+
+.app-logo {
+    grid-area: logo;
+    width: 62px;
+    justify-self: center;
+}
+
+.chat-icon {
+    grid-area: comment;
+}
+
+.profile {
+    grid-area: profile;
+    height: 500px;
+    background-image: url(./images/dog-teddy.jpg);
+    background-size: cover;
+    border-radius: 5px;
+    position: relative;
+}
+
+.profile-name, .profile-description {
+    position: absolute;
+    color: #fff;
+    bottom: 5px;
+    left: 10px;
+}
+
+.profile-name {
+    bottom: 20px;
+}
+
+
+.reject-icon {
+    grid-area: reject;
+}
+
+.heart-icon {
+    grid-area: heart;
+}
+
+.reject-icon, .heart-icon {
+    border-radius: 50px;
+    margin: 1em 0;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    padding: 15px;
+    justify-self: center;
+    box-shadow:0 10px 20px #E9E9EA;
+}
+
+.heart-icon:hover {
+    background: #DBFFF4;
+    box-shadow: 0px 10px 20px #CCF1E6;
+}
+
+.reject-icon:hover {
+    background: #FFE7EF;
+    box-shadow: 0px 10px 20px #EDD9DF;
+}
+
+.like-badge, .nope-badge {
+    position: absolute;
+    max-width: 150px;
+    transform: rotate(-30deg);
+    top: 3em;
+    left: 1em;
+    /* display: none; */
+}
+
+
+
+
+
+
+
+
+
