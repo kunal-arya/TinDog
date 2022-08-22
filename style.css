@@ -15,10 +15,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-img {
-    max-width: 100%;
-}
-
 main {
     display: grid;
     grid-template-columns: 5px repeat(6,minmax(50px,auto)) 5px;
@@ -57,24 +53,30 @@ main {
 
 .profile {
     grid-area: profile;
-    height: 500px;
-    background-image: url(./images/dog-teddy.jpg);
-    background-size: cover;
-    border-radius: 5px;
     position: relative;
+    max-width: 400px;
+    height: 60vh;
 }
 
-.profile-name, .profile-description {
+.profile-render, .profile-img {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-img {
+    border-radius: 5px;
+    object-fit: cover;
+    display: block;
+
+}
+
+.profile-bio {
     position: absolute;
     color: #fff;
     bottom: 5px;
     left: 10px;
+    padding: 0.25em;
 }
-
-.profile-name {
-    bottom: 20px;
-}
-
 
 .reject-icon {
     grid-area: reject;
@@ -111,12 +113,13 @@ main {
     transform: rotate(-30deg);
     top: 3em;
     left: 1em;
-    /* display: none; */
 }
 
+/* These classes will activate when someone press heart-badge OR nope-badge */
 
-
-
+.badge-remove {
+    display: none;
+}
 
 
 
